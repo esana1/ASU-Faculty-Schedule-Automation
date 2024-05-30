@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: maroon;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li.success {
+            border-left: 5px solid green;
+        }
+        li.failed {
+            border-left: 5px solid red;
+        }
+        a {
+            display: block;
+            width: 200px;
+            background-color: maroon;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 20px auto;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #a83250;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Send Results</h1>
+    <ul>
+        {% for result in results %}
+            <li class="{{ result.status|lower }}">
+                <span>{{ result.name }}</span>
+                <span>{{ result.status }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Send Another Batch</a>
+</body>
+</html>

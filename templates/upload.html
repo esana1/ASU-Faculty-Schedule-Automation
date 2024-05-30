@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Excel File</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            flex: 1;
+        }
+        header, footer {
+            background-color: maroon;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: maroon;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: maroon;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #a83250;
+        }
+        footer {
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the end of the page */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>ASU Professor Schedule Mailer</h2>
+    </header>
+    <main>
+        <h1>Upload Excel File for Processing</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <input type="submit" value="Upload and Process">
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Arizona State University</p>
+    </footer>
+</body>
+</html>
