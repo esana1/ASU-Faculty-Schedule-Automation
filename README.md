@@ -20,7 +20,6 @@ Developed a web application for automating the emailing of faculty schedules, si
 - Pandas
 - SQL
 - HTML/CSS
-- JavaScript
 - Bootstrap
 
 ## Installation and Usage
